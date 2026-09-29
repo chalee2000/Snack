@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Block Blast</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='14' height='14' x='1' y='1' rx='3' fill='%236c5ce7'/%3E%3Crect width='14' height='14' x='17' y='1' rx='3' fill='%234ecdc4'/%3E%3Crect width='14' height='14' x='1' y='17' rx='3' fill='%23ffd93d'/%3E%3Crect width='14' height='14' x='17' y='17' rx='3' fill='%23ff6b6b'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <header>
+      <h1>Block Blast</h1>
+      <div id="scoreboard">
+        <div class="score-box">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-box">
+          <span>Best</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <div id="board"></div>
+
+    <div id="tray">
+      <div class="tray-slot" data-slot="0"></div>
+      <div class="tray-slot" data-slot="1"></div>
+      <div class="tray-slot" data-slot="2"></div>
+    </div>
+
+    <button id="newGameBtn">New Game</button>
+  </div>
+
+  <div id="gameOverOverlay" class="hidden">
+    <div class="gameover-card">
+      <h2>Game Over</h2>
+      <p>Score: <strong id="finalScore">0</strong></p>
+      <p id="newBestMsg" class="hidden">New Best!</p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <div id="dragLayer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
