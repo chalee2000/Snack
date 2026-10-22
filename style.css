@@ -13,6 +13,7 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 html, body {
@@ -31,7 +32,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  padding: 16px 12px 24px;
+  padding: calc(16px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right))
+    calc(24px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));
   min-height: 100%;
 }
 
@@ -169,6 +171,7 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: grab;
+  touch-action: none;
 }
 
 .tray-piece-wrapper.dragging-source {
@@ -196,6 +199,7 @@ h1 {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 6px 16px #6c5ce766;
+  touch-action: manipulation;
 }
 
 #newGameBtn:active, #restartBtn:active {
